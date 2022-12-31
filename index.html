@@ -4,12 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New years count-down</title>
 </head>
 <body>
-    
+    <p id="time"></p>
+    <script>
+        const today = new Date();
+        var seconds = today.getSeconds();
+        var minutes = today.getMinutes()
+        var hours = today.getHours()
+
+        var s = 0;
+        var x;
+        if(hours == 23){
+            s = 1;
+            if(minutes == 59){
+                s = 2;
+            }
+        }
+        if(s == 0){
+            rem = 24 - hours;
+            x = ('remaning h: '+rem);
+        }
+        if(s == 1){
+            rem = 60 - minutes;
+            x = ('remaning min: '+rem);
+        }
+        if(s == 2){
+            rem = 60 - seconds;
+            x = ('rremaning min: '+rem);
+        }
+        if(s == 2){
+            rem = 60 - seconds;
+            if(rem == 0){
+                x = 'Happy new year!!!!'
+            }
+        }
+        document.getElementById("time").innerHTML = x;
+        console.log(s);
+        
+        window.location.reload();
+    </script>
 </body>
 </html>
-
-
-jhhfawjy`vs b8iae gvtsug ndsvarth
